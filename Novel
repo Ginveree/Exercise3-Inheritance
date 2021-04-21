@@ -1,0 +1,34 @@
+package Inheritance;
+import java.util.Scanner;
+public class Novel extends Book {
+	Scanner sc = new Scanner(System.in);
+	private double price, discount;
+	
+	public Novel(String g, int q, String a, double p, double d) {
+		super(g,q,a);
+		this.price = p;
+		this.discount = d;
+	}
+
+	public double getPrice() {
+		return this.price;
+	}
+	public double getDiscount() {
+		return this.discount;
+	}
+	public double totalPrice() {
+		return this.price * this.getQSold();
+	}
+	public double disReceived() {
+		return totalPrice() * this.discount;
+	}
+	public double afterDis() {
+		return totalPrice() - disReceived();
+	}
+	public String toString() {
+		return super.toString() + "\nPrice per book\t\t\t: RM " 
+	    + price + "\nTotal Price before discount\t: RM " + totalPrice() + "\nDiscount\t\t\t: RM " 
+	    + disReceived() + "\nTotal Price after discount\t: RM " + afterDis();
+	}
+
+}
