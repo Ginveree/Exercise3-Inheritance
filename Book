@@ -1,0 +1,35 @@
+package Inheritance;
+import java.util.Scanner;
+public class Book {
+	Scanner sc = new Scanner(System.in);
+	private String genre, author;
+	private int qSold;
+	
+    public Book() {
+    	System.out.print("Genre\t\t: ");
+    	this.genre = sc.next();
+    	System.out.print("Quantity Sold\t: ");
+    	this.qSold = sc.nextInt();
+    	System.out.print("Author\t\t: ");
+    	this.author = sc.nextLine() + sc.next();
+    }
+    public Book(String g, int q, String a) {
+    	this.genre = g;
+    	this.qSold = q;
+    	this.author = a;
+    }
+    public String getGenre() {
+    	return this.genre;
+    }
+    public int getQSold() {
+    	return this.qSold;
+    }
+    public String getAuthor() {
+    	return this.author;
+    }
+    public String toString() {
+    	return "Genre\t\t\t\t: " + genre + "\nQuantity\t\t\t: " 
+        + qSold + " books\nAuthor\t\t\t\t: " + author;
+    }
+
+}
