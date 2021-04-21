@@ -1,0 +1,21 @@
+package Inheritance;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Book objBook = new Book();
+		Novel objNovel = new Novel("Fantasy",10,"J.K. Rowling",200.90,0.1);
+		
+		System.out.println("\n\t\t     Book");
+		System.out.println("************************"
+				           + "**********************");
+		System.out.println(objBook);
+		
+		System.out.println("\n\t\t     Novel");
+		System.out.println("************************"
+				           + "**********************");
+		System.out.println(objNovel);
+		
+	}
+
+}
